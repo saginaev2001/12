@@ -1,22 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-<script>
-  var OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "0bf8888d-6f3f-4660-a391-71a8a3be9330",
-    });
-  });
-</script>
-	
-	<title>ЖССБК</title>
-</head>
-<body>
-	<input type="button" onclick="notifset()" value="Notification">
-<script >
+	<script >
 	function notifyMe(){
 		var notification = new Notification("Здравствуйте осталось 3 человек",{
 			tag:"ache:mail",
@@ -39,6 +24,22 @@
 		}
 	}
 </script>
+	<meta charset="utf-8">
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "0bf8888d-6f3f-4660-a391-71a8a3be9330",
+    });
+  });
+</script>
+	
+	<title>ЖССБК</title>
+</head>
+<body>
+	<input type="button" onclick="notifset()" value="Notification">
+
 
 </body>
 </html>
