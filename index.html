@@ -1,28 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script >
-	function notifyMe(){
-		var notification = new Notification("Здравствуйте осталось 3 человек",{
-			tag:"ache:mail",
-			body:"Вам Пора идти",
-			icon:"https://hcsbk.kz/local/templates/.default/images/logo2.png"
-		})
-	}
-	function notifset(){
-		if (!("Notification" in window))
-			alert("Ваш браузер");
-		else if (Notification.permission === "granted")
-			setTimeout(notifyMe,2000);
-		else if (Notification.permission !== "denied"){
-			Notification.requestPermission(function(permission){
-				if(!('permission' in Notification))
-					Notification.permission = permission;
-				if (permission === "granted")
-					setTimeout(notifyMe,2000);
-			}) 
-		}
-	}
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "0bf8888d-6f3f-4660-a391-71a8a3be9330",
+    });
+  });
 </script>
 	<meta charset="utf-8">
 	
